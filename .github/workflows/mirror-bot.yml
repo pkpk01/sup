@@ -15,7 +15,6 @@ jobs:
        - name: cloning repo
          continue-on-error: true
          run: |
-           expect -c " 
            spawn git clone ${{ secrets.REPOM }} source
            expect \"Username\"        
            send \"${{ secrets.GHUSER }}\r\"
